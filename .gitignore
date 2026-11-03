@@ -1,0 +1,14 @@
+slprj/
+*.slxc
+*.asv
+*.autosave
+*.m~
+codegen/
+*_grt_rtw/
+*_ert_rtw/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+.pytest_cache/
