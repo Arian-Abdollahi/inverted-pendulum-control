@@ -1,43 +1,25 @@
 # Inverted Pendulum Control
 
-MATLAB and Simulink study of an inverted pendulum mounted on a cart, covering mathematical modeling, stability analysis, PID control, full-state feedback, and comparisons with a nonlinear model.
+Control-system study of an **inverted pendulum on a moving cart**, using MATLAB and Simulink. Based on the team's submitted linear-control course project.
 
-The main work examines how feedback can stabilize the upright operating point and where a controller designed from a linear model can fail on nonlinear dynamics. The supplied report is in Persian; this README and the accompanying guides provide an English overview.
+## Source code
 
-## Project contents
+This repository now includes the original MATLAB scripts, organized as follows:
 
-| Area | Included work |
+| Directory | Purpose |
 | --- | --- |
-| Modeling | Physical parameters, state-space representation, cart-position and pendulum-angle transfer functions |
-| Open-loop analysis | Pole locations, root locus, step response, Bode and Nyquist plots, gain/phase margins |
-| Model reduction | Comparison between the original and reduced-order angle models |
-| PID control | MATLAB response analysis, a Simulink implementation, and saved figures |
-| State feedback | Ackermann pole placement, alternative pole choices, and Simulink comparisons |
-| Nonlinear comparison | Saved step and impulse-train experiments showing limits of the linear controller |
-| Reference material | Credited third-party LQR/swing-up examples, a legacy GUI, and supplied animation media |
-
-## Selected saved results
-
-These figures are preserved from the submitted project. Different scripts, models, and report sections use different controller settings; they should not be interpreted as one reproducible experiment with a single gain set.
-
-| PID response | State-feedback response |
-| --- | --- |
-| ![Saved PID step response](controllers/pid/final-pid-step.png) | ![Saved state-feedback step response](controllers/state_feedback/state_feedback_step_response.png) |
-
-The original nonlinear comparisons show that the tested linear PID configuration does not provide satisfactory nonlinear behavior. This is an observed limitation of the submitted design.
+| [analysis/modeling/](analysis/modeling/) | Cart-pendulum state-space and transfer-function models |
+| [analysis/model_reduction/](analysis/model_reduction/) | Reduced-order response comparison |
+| [analysis/stability/](analysis/stability/) | Root locus |
+| [analysis/time_domain/](analysis/time_domain/) | Open-loop step response |
+| [analysis/frequency/](analysis/frequency/) | Bode and Nyquist scripts |
+| [controllers/pid/](controllers/pid/) | PID experiments |
+| [controllers/state_feedback/](controllers/state_feedback/) | State-feedback pole-placement scripts |
+| [docs/](docs/) | Setup, model summary, and verification limits |
 
 ## Getting started
 
-Requirements: MATLAB, Control System Toolbox, and Simulink for the `.slx` models. The optional 3D animation examples also use Simulink 3D Animation/legacy VR blocks. The original MATLAB release was not specified.
-
-Clone the repository and open MATLAB in its root:
-
-```bash
-git clone https://github.com/Arian-Abdollahi/inverted-pendulum-control.git
-cd inverted-pendulum-control
-```
-
-Start with the modeling scripts, then inspect the PID and state-feedback examples independently:
+Requires **MATLAB and Control System Toolbox**. From the repository root:
 
 ```matlab
 run('analysis/modeling/state.m');
@@ -49,27 +31,18 @@ run('controllers/pid/final_pid.m');
 
 clearvars;
 run('controllers/state_feedback/state_feedback.m');
-
-open_system('controllers/pid/PID.slx');
 ```
 
-See [running instructions](docs/RUNNING.md) for all entry points, dependencies, and known script limitations. Run each example in its own workspace and avoid adding every subfolder to the MATLAB path.
+Read [RUNNING.md](docs/RUNNING.md) for caveats. The supplied scripts have not been rerun in MATLAB.
 
-## Documentation and report
+## Project archive and completeness
 
-- [Physical model and equations](docs/MODEL.md)
-- [How to run the scripts and models](docs/RUNNING.md)
-- [Interpretation of the saved results](docs/RESULTS.md)
-- [Verification scope](docs/VERIFICATION.md)
-- [Technical report — PDF, Persian](reports/project_report.pdf)
-- [Video and animation references](media/README.md)
-- [Team and third-party credits](CREDITS.md)
-- [Source-file mapping and exclusions](docs/SOURCE_MANIFEST.json)
+The user-supplied ZIP contained a nested RAR archive, MATLAB scripts, **7 Simulink models**, plots, saved animations, and a **34-page Persian submitted report**. A separate **17-page university assignment brief** was also supplied.
 
-## Verification status
+The **complete 71-file Git-ready package has been prepared outside this repository**. This branch imports the MATLAB text files and documentation only. The `.slx` models, PDF/DOCX reports, figures, third-party examples and large media **are not yet committed to GitHub** and must be imported separately. See [verification and scope](docs/VERIFICATION.md). In particular, do not treat missing images or models as available through links here.
 
-The physical model, transfer-function coefficients, controllability/observability ranks, and state-feedback pole placement were independently checked using NumPy/SciPy. All seven Simulink archives passed ZIP/XML integrity checks. MATLAB and Simulink simulations were **not rerun** during repository preparation; saved figures and reported performance remain original project evidence.
+No claim is made that saved controller plots have been regenerated or that closed-loop performance has been independently verified.
 
-## Authorship and reuse
+## Credits
 
-The source report credits Arian Abdollahi, Matin Masoudi, Armin Hatami, and Mohammad Sadegh Rezvani. Individual contributions are not specified in the supplied files. Third-party animation code is separated under `third_party/`; its original notices and the supplied MIT license are retained. No new project-wide license has been assigned. See [CREDITS.md](CREDITS.md).
+The submitted report credits **Arian Abdollahi, Matin Masoudi, Armin Hatami and Mohammad Sadegh Rezvani**. Third-party work is separately identified in [CREDITS.md](CREDITS.md); no repository-wide license is implied.
