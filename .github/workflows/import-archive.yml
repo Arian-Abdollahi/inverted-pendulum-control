@@ -82,7 +82,7 @@ jobs:
 
           replacements = {
               "README.md": (
-                  "The **complete 71-file Git-ready package has been prepared outside this repository**. This branch imports the MATLAB text files and documentation only. The \`.slx\` models, PDF/DOCX reports, figures, third-party examples and large media **are not yet committed to GitHub** and must be imported separately. See [verification and scope](docs/VERIFICATION.md). In particular, do not treat missing images or models as available through links here.",
+                  "The **complete 71-file Git-ready package has been prepared outside this repository**. This branch imports the MATLAB text files and documentation only. The `.slx` models, PDF/DOCX reports, figures, third-party examples and large media **are not yet committed to GitHub** and must be imported separately. See [verification and scope](docs/VERIFICATION.md). In particular, do not treat missing images or models as available through links here.",
                   "The complete 71-file Git-ready project archive has been imported into this branch. The repository includes the original MATLAB source, seven Simulink models, reports, saved plots and media. Read [verification and scope](docs/VERIFICATION.md) before treating original outputs as independently reproduced."
               ),
               "docs/VERIFICATION.md": (
@@ -90,7 +90,7 @@ jobs:
                   "This branch now includes the binary Simulink models, plots, animations, reports, and MATLAB text sources from the 71-file prepared archive. Archive integrity was checked during import; the MATLAB/Simulink simulations have not been rerun."
               ),
               "docs/RUNNING.md": (
-                  "- Full \`.slx\`, graphical, video, PDF and DOCX assets are in the separately supplied \`inverted-pendulum-control-git-ready.zip\` until those binary files have been uploaded.",
+                  "- Full `.slx`, graphical, video, PDF and DOCX assets are in the separately supplied `inverted-pendulum-control-git-ready.zip` until those binary files have been uploaded.",
                   "- The prepared archive's Simulink models, graphics, videos, PDF and DOCX files are now included in this branch."
               )
           }
