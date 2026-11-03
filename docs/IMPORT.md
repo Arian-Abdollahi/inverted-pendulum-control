@@ -1,34 +1,35 @@
-# Finish importing the original project assets
+# Complete the inverted-pendulum project import
 
-The 71-file Git-ready archive was prepared from the supplied inverted pendulum project. The GitHub connector has committed the MATLAB source files and documentation to the pull-request branch, but cannot upload binary objects directly from the chat container.
+The GitHub branch currently has the MATLAB source, documentation and import tooling. The remaining Simulink models, reports, figures and media are inside the prepared **71-file** ZIP archive.
 
-**Do not merge the PR until the remaining files have been uploaded and the integrity workflow passes.**
+**The simplest method is now a single file upload on GitHub.** A workflow already committed at `.github/workflows/import-archive.yml` handles unpacking and committing the missing assets.
 
-## Complete the upload
+## Option A: One ZIP upload (recommended)
 
 1. Download `inverted-pendulum-control-git-ready.zip` from the ChatGPT conversation.
-2. Download `finish_inverted_pendulum_import.py` from the same conversation, or use the copy in `scripts/finish_import.py` on this branch.
-3. On your computer, install Git and configure your normal GitHub authentication. Do not paste passwords or personal access tokens into ChatGPT.
-4. In a terminal, preview the files to add:
+2. Open the [repository](https://github.com/Arian-Abdollahi/inverted-pendulum-control).
+3. Select the branch **`import/inverted-pendulum-source`**, not `main`.
+4. Click **Add file → Upload files**.
+5. Upload the **ZIP itself**, named exactly `inverted-pendulum-control-git-ready.zip`, into the **repository root**. Do not extract it or place it in a subfolder.
+6. Commit to the **current branch**.
+7. Open the [GitHub Actions page](https://github.com/Arian-Abdollahi/inverted-pendulum-control/actions) and check the **Import project archive** workflow. It extracts only missing files, preserves existing project code, verifies the seven Simulink `.slx` files and required PDFs, updates the docs, deletes the temporary ZIP, and pushes to the import branch.
+8. Review [PR #1](https://github.com/Arian-Abdollahi/inverted-pendulum-control/pull/1). **Do not merge** until the workflow has succeeded and you have reviewed the new files.
+
+GitHub's browser file limit is ordinarily 25 MiB per file; this prepared ZIP is roughly 21 MB, so it is below that limit.
+
+## Option B: Local Git upload (fallback)
+
+If uploading through the GitHub web interface or GitHub Actions is unavailable, download `finish_inverted_pendulum_import.py` from ChatGPT (also tracked here as `scripts/finish_import.py`). With Git and Python installed and GitHub authentication configured locally, preview and upload:
 
 ```bash
-python finish_inverted_pendulum_import.py /path/to/inverted-pendulum-control-git-ready.zip
+python finish_inverted_pendulum_import.py inverted-pendulum-control-git-ready.zip
+python finish_inverted_pendulum_import.py inverted-pendulum-control-git-ready.zip --push
 ```
 
-5. When ready, run:
+The script checks out only the import branch, preserves existing files, verifies the project files, and commits the missing assets. It does not touch `main`.
 
-```bash
-python finish_inverted_pendulum_import.py /path/to/inverted-pendulum-control-git-ready.zip --push
-```
+## Licensing and validation
 
-The script clones **only** `import/inverted-pendulum-source`, skips files that already exist there, adds missing files from the ZIP, validates seven Simulink archives and PDF headers, commits, and pushes to that branch. It does **not** modify `main`.
+Third-party animation and legacy code/media are present in the archive. Their rights have not all been verified, so keep the repository private until publication permissions are checked.
 
-The `.github/workflows/structure.yml` check is expected to fail until the missing binary files have been committed. After the push, review the changed files, permissions and licenses, and the workflow result before merging [PR #1](https://github.com/Arian-Abdollahi/inverted-pendulum-control/pull/1).
-
-## Provenance and licenses
-
-The package contains original course work plus credited third-party examples, animations, and media. License/author attribution for some material, including a legacy GUI and animations, has not been confirmed. Keep the repository private until public redistribution rights have been checked.
-
-## Validation limits
-
-Archive integrity checks do not demonstrate correctness of the MATLAB/Simulink simulations. MATLAB and Simulink execution has not been rerun.
+Archive checks confirm file structure and integrity, **not** scientific or control-system correctness. MATLAB/Simulink runs have not been repeated.
