@@ -9,6 +9,8 @@ on:
       - import/inverted-pendulum-source
     paths:
       - inverted-pendulum-control-git-ready.zip
+      - inverted-pendulum-project-upload.zip
+      - .github/workflows/import-archive.yml
 
 permissions:
   contents: write
@@ -32,9 +34,14 @@ jobs:
           from zipfile import ZipFile
           import stat
 
-          archive_path = Path("inverted-pendulum-control-git-ready.zip")
-          if not archive_path.is_file():
-              raise SystemExit("Expected uploaded project archive at repository root")
+          candidates = [
+              Path("inverted-pendulum-control-git-ready.zip"),
+              Path("inverted-pendulum-project-upload.zip"),
+          ]
+          present = [path for path in candidates if path.is_file()]
+          if len(present) != 1:
+              raise SystemExit(f"Expected exactly one prepared project ZIP; found: {present}")
+          archive_path = present[0]
           if archive_path.stat().st_size > 25_000_000:
               raise SystemExit("Unexpectedly large ZIP; refusing automatic import")
 
