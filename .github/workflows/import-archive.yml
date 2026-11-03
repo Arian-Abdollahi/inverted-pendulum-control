@@ -1,0 +1,116 @@
+name: Import project archive
+
+# The archive is uploaded manually to this PR branch because the ChatGPT
+# GitHub connector cannot transfer local binary files. GitHub Actions then
+# imports everything missing, validates the project, and removes the archive.
+on:
+  push:
+    branches:
+      - import/inverted-pendulum-source
+    paths:
+      - inverted-pendulum-control-git-ready.zip
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    name: Extract and verify project assets
+    if: github.ref == 'refs/heads/import/inverted-pendulum-source'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the import branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Extract missing files safely
+        run: |
+          python - <<'PY'
+          from pathlib import Path, PurePosixPath
+          from zipfile import ZipFile
+          import stat
+
+          archive_path = Path("inverted-pendulum-control-git-ready.zip")
+          if not archive_path.is_file():
+              raise SystemExit("Expected uploaded project archive at repository root")
+          if archive_path.stat().st_size > 25_000_000:
+              raise SystemExit("Unexpectedly large ZIP; refusing automatic import")
+
+          created = []
+          kept = []
+          with ZipFile(archive_path) as archive:
+              corrupt = archive.testzip()
+              if corrupt:
+                  raise SystemExit(f"Corrupt ZIP entry: {corrupt}")
+              records = [entry for entry in archive.infolist() if not entry.is_dir()]
+              if len(records) != 71:
+                  raise SystemExit(f"Expected the prepared 71-file archive, found {len(records)} files")
+              paths = set()
+              for entry in records:
+                  pure = PurePosixPath(entry.filename)
+                  if (pure.is_absolute() or not pure.parts or ".." in pure.parts
+                          or "\\" in entry.filename or pure.parts[0] in {".git", ".github"}):
+                      raise SystemExit(f"Unsafe archive member path: {entry.filename!r}")
+                  if pure.as_posix() in paths:
+                      raise SystemExit(f"Duplicate archive member: {pure.as_posix()}")
+                  paths.add(pure.as_posix())
+                  mode = (entry.external_attr >> 16) & 0o170000
+                  if mode not in (0, stat.S_IFREG):
+                      raise SystemExit(f"Unsupported archive member type: {entry.filename}")
+                  target = Path(*pure.parts)
+                  if target.exists():
+                      kept.append(str(target))
+                      continue
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(entry))
+                  created.append(str(target))
+          archive_path.unlink()
+          print(f"Preserved {len(kept)} existing files; imported {len(created)} missing files.")
+          for path in created:
+              print("  +", path)
+          PY
+
+      - name: Check complete project integrity
+        run: python scripts/validate_structure.py
+
+      - name: Update import status documentation
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              "README.md": (
+                  "The **complete 71-file Git-ready package has been prepared outside this repository**. This branch imports the MATLAB text files and documentation only. The \`.slx\` models, PDF/DOCX reports, figures, third-party examples and large media **are not yet committed to GitHub** and must be imported separately. See [verification and scope](docs/VERIFICATION.md). In particular, do not treat missing images or models as available through links here.",
+                  "The complete 71-file Git-ready project archive has been imported into this branch. The repository includes the original MATLAB source, seven Simulink models, reports, saved plots and media. Read [verification and scope](docs/VERIFICATION.md) before treating original outputs as independently reproduced."
+              ),
+              "docs/VERIFICATION.md": (
+                  "This repository branch contains the MATLAB **text source** and documentation; the binary Simulink models, plots, animations, and reports have **not yet been committed** here. Do not claim the GitHub repository is a complete mirror of the ZIP until those assets are uploaded.",
+                  "This branch now includes the binary Simulink models, plots, animations, reports, and MATLAB text sources from the 71-file prepared archive. Archive integrity was checked during import; the MATLAB/Simulink simulations have not been rerun."
+              ),
+              "docs/RUNNING.md": (
+                  "- Full \`.slx\`, graphical, video, PDF and DOCX assets are in the separately supplied \`inverted-pendulum-control-git-ready.zip\` until those binary files have been uploaded.",
+                  "- The prepared archive's Simulink models, graphics, videos, PDF and DOCX files are now included in this branch."
+              )
+          }
+          for name, (old, new) in replacements.items():
+              path = Path(name)
+              contents = path.read_text(encoding="utf-8")
+              if old not in contents:
+                  print(f"Skipping documentation update in {name}: expected text not found")
+                  continue
+              path.write_text(contents.replace(old, new), encoding="utf-8")
+          PY
+
+      - name: Commit missing project assets to the import branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing new to commit."
+            exit 0
+          fi
+          git commit -m "import: add remaining Simulink models, reports and media"
+          git push origin HEAD:import/inverted-pendulum-source
