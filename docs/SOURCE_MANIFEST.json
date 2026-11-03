@@ -1,0 +1,347 @@
+{
+  "origin": "User-provided ZIP with nested RAR5; separate PDF course assignment",
+  "files": [
+    {
+      "path": "analysis/frequency/ControlSystemDesignerSession.mat",
+      "source_in_rar": "part 2/3/ControlSystemDesignerSession.mat",
+      "size_bytes": 8673,
+      "sha256": "ee73c7e5b2bac06755ef8ec906527f16467b711e9efe4f4ac965b2ba5a6990c3"
+    },
+    {
+      "path": "analysis/frequency/bode.fig",
+      "source_in_rar": "part 2/3/bode.fig",
+      "size_bytes": 81434,
+      "sha256": "380e880f48d6f84a8a2c0413ad8b0b1667a757b2e530ad3bf8658ab20676a118"
+    },
+    {
+      "path": "analysis/frequency/bode_analysis.m",
+      "source_in_rar": "part 2/3/bode.m",
+      "size_bytes": 89,
+      "sha256": "17bb9fc754094c5e260b9c70ebc5adb3ff55f3393e6b0f41076919b30abe3e9b"
+    },
+    {
+      "path": "analysis/frequency/nyquist.fig",
+      "source_in_rar": "part 2/3/nyquist.fig",
+      "size_bytes": 58238,
+      "sha256": "cff0e9d879e3f62898fe146d34a97de3cbc706b58fadc68de4534e2346e96a80"
+    },
+    {
+      "path": "analysis/frequency/nyquist_analysis.m",
+      "source_in_rar": "part 2/3/nyquist.m",
+      "size_bytes": 447,
+      "sha256": "b810698bd2d01f14ae6f8dc2417cb960c50e11fcc6acb0788bb30b65c1a3c851"
+    },
+    {
+      "path": "analysis/model_reduction/pasokh_pele_taghrib.m",
+      "source_in_rar": "part 1/6/pasokh_pele_taghrib.m",
+      "size_bytes": 194,
+      "sha256": "46fc990c778deb1ebdb036ba89ad67e314857abbcc2043d40a447b1c5e531238"
+    },
+    {
+      "path": "analysis/modeling/state.m",
+      "source_in_rar": "part 1/4/state.m",
+      "size_bytes": 607,
+      "sha256": "8bf064420cc0213740c89cf60aa2898abffaba251ac42f88b50b0b8ca1ecf3ac"
+    },
+    {
+      "path": "analysis/modeling/transfer_function.m",
+      "source_in_rar": "part 1/4/transfer_function.m",
+      "size_bytes": 550,
+      "sha256": "905319386454b6e3ccad4ed4ab51b863b7292f84a1d083377cacf3ad8b885d1d"
+    },
+    {
+      "path": "analysis/stability/root_locus.m",
+      "source_in_rar": "part 2/1/root_locus.m",
+      "size_bytes": 86,
+      "sha256": "473d41e10762df9302cf02536b9590fe09ea8ef53fc0ca789d3bbe615b42dd4a"
+    },
+    {
+      "path": "analysis/time_domain/step_response.m",
+      "source_in_rar": "part 2/2/step.m",
+      "size_bytes": 116,
+      "sha256": "562040ff2bd47b2764304d94952e8ac822230f262a19d305dc36f967382436b7"
+    },
+    {
+      "path": "controllers/nonlinear/impulse_train_response.png",
+      "source_in_rar": "part 3/6/ghatar-zarbe_nonlinear.png",
+      "size_bytes": 144067,
+      "sha256": "bb148216b91fb6760aca96e393500bbfe36ba176af0b0737cc6fe5e41d26cbb4"
+    },
+    {
+      "path": "controllers/nonlinear/nonlinearfinal.slx",
+      "source_in_rar": "part 3/6/nonlinearfinal.slx",
+      "size_bytes": 46887,
+      "sha256": "90c343df7069d2386dba046d4b29fb617b540c3c443333b5ae1dc3aa5e4586fc"
+    },
+    {
+      "path": "controllers/nonlinear/step_response.png",
+      "source_in_rar": "part 3/6/Step_nonlinear.png",
+      "size_bytes": 146751,
+      "sha256": "bf485c17c10d60df7170b8ec7f0fa0937818caa34a77ab2dd5cbb97135cada41"
+    },
+    {
+      "path": "controllers/pid/PID.slx",
+      "source_in_rar": "part 3/1/PID.slx",
+      "size_bytes": 26393,
+      "sha256": "ab2be9cb2af534a2808884f67181e031d4c99f2b03744b9f25d26ecde64e0e44"
+    },
+    {
+      "path": "controllers/pid/bode_gainmargin_bad_pid.png",
+      "source_in_rar": "part 3/2/bode_gainmargin_bad_pid.png",
+      "size_bytes": 31519,
+      "sha256": "607ab7c879f2f6cdde3d2dcf29c404fe561f44661cb12af55c98e22ebe0cc81e"
+    },
+    {
+      "path": "controllers/pid/control_input_amplitude.jpg",
+      "source_in_rar": "part 3/1/Nemudar damane vorudi controly.jpg",
+      "size_bytes": 59049,
+      "sha256": "3fb69acfb599458cf4ce31a5d242b61a359f850589ad82b3f31acda66fc94700"
+    },
+    {
+      "path": "controllers/pid/final-pid-step.png",
+      "source_in_rar": "part 3/1/final-pid-step.png",
+      "size_bytes": 15018,
+      "sha256": "91be7abf0bca74550572476cecd4ae3f17329721ffb04a441d5ddf32778d7d0e"
+    },
+    {
+      "path": "controllers/pid/final_pid.m",
+      "source_in_rar": "part 3/1/final_pid.m",
+      "size_bytes": 299,
+      "sha256": "aa11bc7e2258189778bb66d6d6e8ee5b2215d8ff35ae6fefbbc2aab58c35cab5"
+    },
+    {
+      "path": "controllers/pid/final_pid_impulse.png",
+      "source_in_rar": "part 3/1/final-pid-impulse.png",
+      "size_bytes": 20278,
+      "sha256": "1ace16cb01f6833f2e138bf2b1e838115a73e42dc11ba2312ce34e503245ba89"
+    },
+    {
+      "path": "controllers/pid/impulse_before_control.jpg",
+      "source_in_rar": "part 3/1/پاسخ ضربه قبل از اعمال کنترلر.jpg",
+      "size_bytes": 17638,
+      "sha256": "57f2c10f1b429b6c624838e901f5fe0a934c83b15f7a4df3445e25eb2eba3d4e"
+    },
+    {
+      "path": "controllers/pid/nyquist_bad_pid.png",
+      "source_in_rar": "part 3/2/nyquist_bad_pid.png",
+      "size_bytes": 25588,
+      "sha256": "ffa1b60d0bd20a9e4331ee1e16292c5c31ca05ed92a47bf3ce7babb8b5dec2ef"
+    },
+    {
+      "path": "controllers/pid/paydari_bad_pid.m",
+      "source_in_rar": "part 3/2/paydari_bad_pid.m",
+      "size_bytes": 335,
+      "sha256": "836d6e8a76e45d2c2aac4bb6c43154d599e6f3aec706360a9806bc92111b0611"
+    },
+    {
+      "path": "controllers/pid/pid_simulink.jpg",
+      "source_in_rar": "part 3/1/PID simulink.jpg",
+      "size_bytes": 64069,
+      "sha256": "8342c8d91459b28695330edcb75d7765e969450b514517c17ebda1a025106085"
+    },
+    {
+      "path": "controllers/pid/pid_simulink_data.jpg",
+      "source_in_rar": "part 3/1/PID simulink Data.jpg",
+      "size_bytes": 63440,
+      "sha256": "7e46939c7146d31cc871ef29dedd89326d7bdc6f257679bd5f8d2fc7f2e9004f"
+    },
+    {
+      "path": "controllers/pid/step_before_control.jpg",
+      "source_in_rar": "part 3/1/پاسخ پله قبل از اعمال کنترلر.jpg",
+      "size_bytes": 16865,
+      "sha256": "69eb6dfe3e04c33f1a101e59d7105d41bee00be0901533d1b873b3937cb990af"
+    },
+    {
+      "path": "controllers/state_feedback/alternate_design_screenshot.png",
+      "source_in_rar": "part 3/4/Screenshot 2024-01-29 1753412.png",
+      "size_bytes": 231022,
+      "sha256": "e6dcd189dde1c7cf213fc96a5cf1ebf186b5435a50980569fd23e235dfcf9a5c"
+    },
+    {
+      "path": "controllers/state_feedback/feedback_hallat.m",
+      "source_in_rar": "part 3/3/feedback_hallat.m",
+      "size_bytes": 634,
+      "sha256": "e1d51be48d977e9e2f0c825c1ee385075e00f264191436e1717b856d7e7e59dd"
+    },
+    {
+      "path": "controllers/state_feedback/state_feedback.m",
+      "source_in_rar": "part 3/3/state_feedback.m",
+      "size_bytes": 535,
+      "sha256": "8296645cd1fc5337852157852139e6296f2e578f2b3b9b73b2aae37b5cdb330f"
+    },
+    {
+      "path": "controllers/state_feedback/state_feedback_PID.m",
+      "source_in_rar": "part 3/3/state_feedback_PID.m",
+      "size_bytes": 535,
+      "sha256": "8296645cd1fc5337852157852139e6296f2e578f2b3b9b73b2aae37b5cdb330f"
+    },
+    {
+      "path": "controllers/state_feedback/state_feedback_simulink.slx",
+      "source_in_rar": "part 3/3/state_feedback_simulink.slx",
+      "size_bytes": 23321,
+      "sha256": "5dad29c868b6f3f338cc1b621cbc4e0e1ec06a028e60905e4cd38f45d6518660"
+    },
+    {
+      "path": "controllers/state_feedback/state_feedback_simulink_alternate.slx",
+      "source_in_rar": "part 3/4/state_feedback_simulink.slx",
+      "size_bytes": 24598,
+      "sha256": "7ecc62a3e65d2b87d6d7e7b965a5806ce589abddbfba0c9ad2145606c5c191b8"
+    },
+    {
+      "path": "controllers/state_feedback/state_feedback_step_response.png",
+      "source_in_rar": "part 3/3/step-response state feedback.png",
+      "size_bytes": 22064,
+      "sha256": "e570088df76683448af2f78b7e81ecf9b5608774c8aea75f52a3b5cdccca4a64"
+    },
+    {
+      "path": "controllers/state_feedback/step_state_feedback.jpg",
+      "source_in_rar": "part 3/3/Step-state feedback.jpg",
+      "size_bytes": 21596,
+      "sha256": "a50ba754fc1cf19fca2a07d2ffea5747acd1cf633b74fd6de2ddde428268b611"
+    },
+    {
+      "path": "figures/bode.jpg",
+      "source_in_rar": "part 2/3/bode.jpg",
+      "size_bytes": 25852,
+      "sha256": "0993c609346730fd78936d69978373d3eeb347d9c8a19f1b8fcde9f16ab3a1fb"
+    },
+    {
+      "path": "figures/gain_phase_margin.png",
+      "source_in_rar": "part 2/3/gain-phase margin.png",
+      "size_bytes": 252230,
+      "sha256": "5d20854d14eb5e93d0330fc0a5bbf68ee0be18257fd334e6f08501520956c211"
+    },
+    {
+      "path": "figures/model_reduction_comparison.jpg",
+      "source_in_rar": "part 1/6/esbat_adam_tatbigh_takhmin.jpg",
+      "size_bytes": 49414,
+      "sha256": "1149eef18f41196f3f7aa64b7a2334b56a95808190130545391997f8f5f685d9"
+    },
+    {
+      "path": "figures/nyquist.jpg",
+      "source_in_rar": "part 2/3/Nyquist.jpg",
+      "size_bytes": 22126,
+      "sha256": "8a86593c3465be1eb07d7f9195bf329726c5a4095c8a7411d89ad7f33342ffcf"
+    },
+    {
+      "path": "figures/open_loop_step.jpg",
+      "source_in_rar": "part 2/2/step response ogi.jpg",
+      "size_bytes": 17822,
+      "sha256": "7ca7cd82398b12a45ac2548d9c6290b7e2d186d205c1a3296ae4683376958237"
+    },
+    {
+      "path": "figures/root_locus.png",
+      "source_in_rar": "part 2/1/rlocus.png",
+      "size_bytes": 15379,
+      "sha256": "ead67c41ef3316c42e96ae264c4420c629e5a67a3e2c8f35e2f1ed50198efbfb"
+    },
+    {
+      "path": "media/inverted_pendulum.gif",
+      "source_in_rar": "clips,gifs,pictures/Inverted_Pendulum.gif",
+      "size_bytes": 2552157,
+      "sha256": "f833564bd7a8d3efc7a71e5ac8ad2f2ca16e3c40295bd577b499428ec1a86a33"
+    },
+    {
+      "path": "media/inverted_pendulum_alt.gif",
+      "source_in_rar": "clips,gifs,pictures/Inverted_Pendulum(2).gif",
+      "size_bytes": 1506141,
+      "sha256": "e34440968d5d0f88e12dac3066d7f8cfdbbbd28f7a02df8602c88c69306442f9"
+    },
+    {
+      "path": "media/inverted_pendulum_cart.mp4",
+      "source_in_rar": "clips,gifs,pictures/Inverted pendulum on a cart.mp4",
+      "size_bytes": 3015554,
+      "sha256": "c2cdc5671c20bb7d49ccc4bac2c122f8a63f6608bf3153ddd908126331a71027"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/IP_LQR_Design.slx",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/IP_LQR_Design.slx",
+      "size_bytes": 32940,
+      "sha256": "a5cb43721989e9f1671daffd4e7310b79470fe816f03e7249b5712246e9427f9"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/IP_Nonlinear_model.slx",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/IP_Nonlinear_model.slx",
+      "size_bytes": 30934,
+      "sha256": "c65fdb51b2774126693fcda41a47b0cb382bb5823c31f028de8d1910e92110da"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/IP_SwingUp_Design.slx",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/IP_SwingUp_Design.slx",
+      "size_bytes": 40427,
+      "sha256": "a4bd9895203b995007f3de8d30873b028dae31f0160d0768d0159c177a94c441"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/Init_Setup_LQRArd.m",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/Init_Setup_LQRArd.m",
+      "size_bytes": 826,
+      "sha256": "65c4b4d5edd6c692ba35c0a79c7a70e20ce15584114a0f705fe37f725ba54fbf"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/Inverted_pendulum12.wrl",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/Inverted_pendulum12.wrl",
+      "size_bytes": 3135,
+      "sha256": "6634d55104a3fa33945f175b13e64f6f10312f52b7868565c94eb84a00b27bd9"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/LICENSE",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/LICENSE",
+      "size_bytes": 1071,
+      "sha256": "ed76e2921417f4a2fa52734167f9bd892cb1e7e097c517b0ebd40426136297e0"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/README.md",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/README.md",
+      "size_bytes": 825,
+      "sha256": "4490301afd176c22a7148fe8f661b71407bd916abcdf8063e87308cf510fa1dc"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/ReadMe.txt",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/ReadMe.txt",
+      "size_bytes": 652,
+      "sha256": "08b73258a04a29cb87797bde9f2c52140181fd6f82904ee11cb5d555def64882"
+    },
+    {
+      "path": "third_party/inverted-pendulum-simulink/ip_model.png",
+      "source_in_rar": "animation/Inverted-Pendulum-Simulink-main/ip_model.png",
+      "size_bytes": 145720,
+      "sha256": "227b98d87f67b2172eea8e43a82e7b2637746476d7e037b11ca56407080476aa"
+    },
+    {
+      "path": "third_party/legacy-gui/invFUN.m",
+      "source_in_rar": "animation/labV/invFUN.m",
+      "size_bytes": 8860,
+      "sha256": "8943c0c68c18f06315b82ded0350b296f14a8aa2b87360f23f2934ed81f7a8ff"
+    },
+    {
+      "path": "third_party/legacy-gui/invGUI.m",
+      "source_in_rar": "animation/labV/invGUI.m",
+      "size_bytes": 7740,
+      "sha256": "953492425ad06878e3cce9cd64f2394b177bf0cb4c017df8bbee6c9e0ca60413"
+    },
+    {
+      "path": "third_party/legacy-gui/invODE.m",
+      "source_in_rar": "animation/labV/invODE.m",
+      "size_bytes": 1407,
+      "sha256": "8ac5c5882baf3303816359bb6fc23c19644f2914a7a2dd73a232504d1b4f9ec3"
+    },
+    {
+      "path": "reports/project_report.pdf",
+      "source_in_rar": "outer_zip/gozareshkar.pdf",
+      "size_bytes": 2161367,
+      "sha256": "e0487a75648f15a2b4e47f7aa0127c2b782f191e12bee98f4e0373a64ec2b2ab"
+    },
+    {
+      "path": "reports/project_report.docx",
+      "source_in_rar": "outer_zip/gozareshkar.docx",
+      "size_bytes": 4879407,
+      "sha256": "d956bcf1d98133ea6531dafe8e13e32e0b4ba1d0f9d5dc012617931142ef0e9e"
+    },
+    {
+      "path": "references/assignment_brief.pdf",
+      "source_in_rar": "uploaded_LC_Project_(2).pdf",
+      "size_bytes": 6925012,
+      "sha256": "4877c016a5365e00744730b5566ade43afb07bb2d2466597667230a86b4571b2"
+    }
+  ]
+}

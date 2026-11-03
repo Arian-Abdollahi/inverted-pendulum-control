@@ -4,6 +4,6 @@ The uploaded ZIP contained a nested RAR5 archive with the original MATLAB/Simuli
 
 The separate, complete Git-ready ZIP archive contains **71 files**. Its seven Simulink `.slx` files passed ZIP integrity tests and contained the expected `simulink/blockdiagram.xml` records. The basic local static verification script passed.
 
-This repository branch contains the MATLAB **text source** and documentation; the binary Simulink models, plots, animations, and reports have **not yet been committed** here. Do not claim the GitHub repository is a complete mirror of the ZIP until those assets are uploaded.
+This branch now includes the binary Simulink models, plots, animations, reports, and MATLAB text sources from the 71-file prepared archive. Archive integrity was checked during import; the MATLAB/Simulink simulations have not been rerun.
 
 No MATLAB/Simulink runtime was available, so there are no new execution or controller-performance claims.

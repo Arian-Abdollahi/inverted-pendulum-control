@@ -23,4 +23,4 @@ Avoid adding every subfolder to the MATLAB path: scripts named `step.m`, `nyquis
 - `controllers/pid/paydari_bad_pid.m` uses `g1` even though its assignment is commented out. It fails in an otherwise clean workspace unless fixed.
 - Different scripts use different controller gains, and archived outputs should not be presented as a unified experiment.
 - MATLAB/Simulink simulations were not rerun in this import.
-- Full `.slx`, graphical, video, PDF and DOCX assets are in the separately supplied `inverted-pendulum-control-git-ready.zip` until those binary files have been uploaded.
+- The prepared archive's Simulink models, graphics, videos, PDF and DOCX files are now included in this branch.

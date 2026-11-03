@@ -39,7 +39,7 @@ Read [RUNNING.md](docs/RUNNING.md) for caveats. The supplied scripts have not be
 
 The user-supplied ZIP contained a nested RAR archive, MATLAB scripts, **7 Simulink models**, plots, saved animations, and a **34-page Persian submitted report**. A separate **17-page university assignment brief** was also supplied.
 
-The **complete 71-file Git-ready package has been prepared outside this repository**. This branch imports the MATLAB text files and documentation only. The `.slx` models, PDF/DOCX reports, figures, third-party examples and large media **are not yet committed to GitHub** and must be imported separately. See [verification and scope](docs/VERIFICATION.md). In particular, do not treat missing images or models as available through links here.
+The complete 71-file Git-ready project archive has been imported into this branch. The repository includes the original MATLAB source, seven Simulink models, reports, saved plots and media. Read [verification and scope](docs/VERIFICATION.md) before treating original outputs as independently reproduced.
 
 No claim is made that saved controller plots have been regenerated or that closed-loop performance has been independently verified.
 
